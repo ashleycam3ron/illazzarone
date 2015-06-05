@@ -33,7 +33,7 @@
 						     </div>
 
 						     <div class="col-md-4">
-						     	<?php the_post_thumbnail('large');?>
+						     	<?php the_post_thumbnail('large', array( 'class' => 'img-responsive'));?>
 						     </div>
 
 						     <div class="col-md-4">

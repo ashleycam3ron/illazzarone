@@ -155,6 +155,12 @@ h1,h2,h3,.lg{text-transform: uppercase;letter-spacing: .15em;}
   -webkit-transition: opacity .5s ease-in-out;
   opacity: 1;
 }
+.item img,
+#footer img{
+  margin: auto;
+}
+
+
 
 .c1,.c2,.c3{height: 172px;list-style: none;border: 10px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);}
@@ -164,6 +170,8 @@ h1,h2,h3,.lg{text-transform: uppercase;letter-spacing: .15em;}
 .c1{background: url(images/beverages.jpg) no-repeat center;background-size: contain;}
 .c2{background: url(images/appetizers-and-salads.jpg) no-repeat center;background-size: contain;}
 .c3{background: url(images/desserts.jpg) no-repeat center;background-size: contain;}
+
+
 
 /* !Navigation  */
 .navbar-default .navbar-collapse {
@@ -234,19 +242,15 @@ h1,h2,h3,.lg{text-transform: uppercase;letter-spacing: .15em;}
 /* ---------------------
 		SOCIAL
 ---------------------  */
-	#social {float: right;}
-	#social li {  float: left;}
-	#social li a{width:37px;height:37px;float:left;margin-right:3px;background:url(images/sprite.png) no-repeat 2px 2px;text-indent:-9999px;font-size:0;}
+	#social li {display: inline-block}
+	#social li a{width:17px;height:19px;display: block;  margin: 7px;background:url(images/connect.png) no-repeat 2px 2px;text-indent:-9999px;font-size:0;}
 	#social li a:hover{}
-	#social li.Facebook a:hover {background-position:2px -35px;}
-	#social li.Twitter a		{background-position:-35px 2px;}
-	#social li.Twitter a:hover	{background-position:-35px -35px;}
-	#social li.RSS				{background-position:-107px 2px;}
-	#social li.RSS:hover		{background-position:-107px -35px;}
-	#social li.LinkedIn a		{background-position:-71px 2px;}
-	#social li.LinkedIn a:hover	{background-position:-71px -35px;}
-	#social li.YouTube a		{background-position:-143px 2px;}
-	#social li.YouTube a:hover	{background-position:-143px -35px;}
+	#social li.facebook a {background-position:6px 0px;}
+	#social li.twitter a		{background-position:-31px 0;}
+	#social li.RSS				{background-position:-107px 0;}
+	#social li.instagram a		{background-position:-67px 0;}
+	#social li.google a		{background-position:-104px 0;}
+	#social li.yelp a		{background-position:-139px 0;}
 /* ---------------------
 		FORM  & MAP
 ---------------------  */
