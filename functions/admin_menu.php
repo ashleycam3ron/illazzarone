@@ -21,10 +21,10 @@
        return array(
            'index.php', // Dashboard
            'separator1', // First separator
+           'edit.php?post_type=menu', // Custom type one
            'edit.php', // Posts
-           'upload.php', // Media
-           'link-manager.php', // Links
            'edit.php?post_type=page', // Pages
+           'upload.php', // Media
            'edit-comments.php', // Comments
            'separator2', // Second separator
            'themes.php', // Appearance

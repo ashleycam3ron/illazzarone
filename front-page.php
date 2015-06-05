@@ -1,46 +1,70 @@
 <?php get_header(); ?>
 
 
-<div id="primary" class="container-fluid">
+<div id="page" class="container-fluid text-center">
 
 	<!-- main slider carousel -->
-    <div class="row">
-        <div class="col-md-12" id="slider">
+    <div class="row" id="feature">
+	    <h2>Our Authentic Neapolitan Pizzas</h2>
+        <div id="slider">
 
-            <div class="col-md-12" id="carousel-bounding-box">
-                <div id="myCarousel" class="carousel slide">
+            <div id="carousel-bounding-box">
+                <div id="carousel" class="carousel slide text-center">
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item" data-slide-number="0">
-                            <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
-                        </div>
-                        <div class="item" data-slide-number="1">
-                            <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
-                        </div>
-                        <div class="item" data-slide-number="2">
-                            <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
-                        </div>
-                        <div class="item" data-slide-number="3">
-                            <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
-                        </div>
+	                    <?php $the_query = new WP_Query(array(
+							'post_type' => 'menu',
+						    'tax_query' => array(
+								array(
+									'taxonomy' => 'courses',
+									'field'    => 'slug',
+									'terms'    => 'pizza',
+								),
+							)
+						    ));
+						    $count = 0;
+						   while ( $the_query->have_posts() ) :
+						   $the_query->the_post(); ?>
+						 <div class="item <?php if ( $count++ == 0){ echo 'active';};?>" data-slide-number="<?php echo $count++;?>">
+						     <h3>The <?php the_title();?></h3>
+						     <div class="col-md-4">
+							    <span class="xl">10"</span>
+						     	<p><?php the_field('brief_description'); ?></p>
+						     </div>
+
+						     <div class="col-md-4">
+						     	<?php the_post_thumbnail('large');?>
+						     </div>
+
+						     <div class="col-md-4">
+							    <span class="lg">Featuring</span>
+						     	<p><?php the_field('ingredients'); ?></p>
+						     </div>
+							 <div class="clearfix">
+								 <h4 class="lg clearfix">Rate Pizza</h4>
+							 	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+							 </div>
+						</div><!-- item active -->
+						<?php endwhile; wp_reset_postdata(); ?>
+
                     </div>
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-arrow-left"></i></a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-arrow-right"></i></a>
+                    <a class="carousel-control left" href="#carousel" data-slide="prev"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                    <a class="carousel-control right" href="#carousel" data-slide="next"><i class="glyphicon glyphicon-arrow-right"></i></a>
                 </div>
             </div>
 
-        </div>
+        </div><!-- end #slider -->
 
         <!-- !Menu -->
 		<ul class="col-md-12">
-	      <li class="col-xs-12 col-sm-6 col-md-4">
+	      <li class="col-xs-12 col-sm-6 col-md-4 c1">
 		      <a>Beverages</a>
 		      <span class="d"></span>
 	      </li>
-		  <li class="col-xs-12 col-sm-6 col-md-4">
+		  <li class="col-xs-12 col-sm-6 col-md-4 c2">
 		      <a>Appetizers & Insalatas</a>
 	      </li>
-	      <li class="col-xs-12 col-sm-6 col-md-4">
+	      <li class="col-xs-12 col-sm-6 col-md-4 c3">
 		      <a>Desserts</a>
 		      <span class="d"></span>
 	      </li>
@@ -56,7 +80,7 @@
 		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="col-xs-12 col-sm-6 col-md-4">
+		<div id="philosophy" class="col-xs-12 col-sm-6 col-md-4">
 		  <h2>Our Philosophy</h2>
 		  <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor.</p>
 		</div>
@@ -83,5 +107,14 @@
 
 
 </div>
+
+<script>
+	jQuery(function($){
+		jQuery('#carousel').carousel({
+		    interval: false
+		});
+
+	});
+</script>
 
 <?php get_footer(); ?>

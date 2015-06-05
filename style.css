@@ -39,6 +39,13 @@ Text Domain: illazzarone
 }
 a{cursor: pointer;}
 a:hover{text-decoration: none;}
+a {color:#900;text-decoration: none;}
+a:hover {color:#800;}
+a:active {color:#900;text-decoration: none;}
+a.btn-default {
+  background: #555;
+  color: #FFF;
+}
 .entry a.btn-default,
 .entry a.btn-default:hover {
   padding: 6px 25px;
@@ -66,9 +73,11 @@ a:hover{text-decoration: none;}
 	}
 
 /* !Hide */
-#nav-primary h2{ display:none;}
+#nav-primary h2,
+#feature > h2,
+#footer > h2{ display:none;}
 
-body {font-size: 100%;color:#555;}
+body {font-size: 14px;color:#555;}
 body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
@@ -96,42 +105,74 @@ blockquote { font-size: 1.25em; /* 20px / 16px */ line-height: 1.25; /* 25px / 2
 
 
 p {  margin: 0 0 14px;}
-p.caption {padding:5px 0px;text-align:right;color: #999999;clear: right;}
 form.wpcf7-form p{padding:0;line-height: 13px;}
-a {color:#900;text-decoration: none;}
-a:hover {color:#800;}
-a:active {color:#900;text-decoration: none;}
-a.btn-default {
-  background: #555;
-  color: #FFF;
+
+h1,h2,h3,.lg{text-transform: uppercase;letter-spacing: .15em;}
+.lg{font-size: x-large;}
+.xl{font-size: xx-large;}
+
+.clearfix{clear: both;}
+.post-ratings {
+  clear: both;
 }
-.entry img {border:4px solid #CCC;max-width: 100%;height: auto;}
+
+#philosophy h2{display: block;text-indent: -999em;background: url(images/our-philosophy.png) no-repeat;  height: 200px;
+  background-size: contain;}
 
 
-
-/* ---------------------
-		MAIN
----------------------  */
-		 -moz-box-shadow: 0px 0px 15px #999; -webkit-box-shadow: 0px 0px 15px #999;  box-shadow: 0px 0px 15px #999;}
-	#header{/* position:fixed; */  background: rgba(255, 255, 255, 0.5);}
-	  .navbar-brand{  background: url(images/logo.png) no-repeat;
-    width: 255px;
-  height: 93px;
+/* !Main */
+#header {background: url(images/pattern.png) repeat;}
+.navbar-brand {
+  background: url(images/logo.png) no-repeat;
+  width: 340px;
+  height: 160px;
   text-indent: -9999px;
   background-size: contain;
-  padding: 0;}
-	  .navbar-brand:hover{opacity:.9;}
-	  #site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
+  position: absolute;
+  left: 50%;
+  margin-left: -170px !important;
+  display: block;
+  z-index: 1;
+}
+#site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
+.bk{background: rgba(0, 0, 0, 0.6);height: 42px;width: 100%;position: absolute;}
 
-	.like-btn{  width: 285px;float: right;clear: right;padding: 20px 0 0;}
-	.home .like-btn p,.like-btn p{font-size: 13px;color: #999;text-align: right;  width: 180px;}
-	.fb-like{float: right;padding: 0 0 10px;width: 100px;text-align: right;}
-/* ---------------------
-		NAVIGATION
----------------------  */
+
+/* !Carousel */
+#feature *{color: white;}
+#feature{background: url(images/bg-wood.jpg) no-repeat;background-size: cover;padding-top: 5%;padding-bottom: 5%;}
+#carousel{}
+.carousel-inner>.item>img {
+  margin: auto;
+}
+.item div {
+    opacity: 0;
+}
+
+.item.active div {
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  opacity: 1;
+}
+
+.c1,.c2,.c3{height: 172px;list-style: none;border: 10px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);}
+.c1 a,.c2 a,.c3 a{ display: block;text-indent:-999em;
+  width: 100%;
+  height: 100%;}
+.c1{background: url(images/beverages.jpg) no-repeat center;background-size: contain;}
+.c2{background: url(images/appetizers-and-salads.jpg) no-repeat center;background-size: contain;}
+.c3{background: url(images/desserts.jpg) no-repeat center;background-size: contain;}
+
+/* !Navigation  */
+.navbar-default .navbar-collapse {
+  border: 0;
+  background-color: #FFF;
+}
 	.menu {list-style: none;}
 	nav > h2{display: none;}
-	.navbar-default {}
+	.navbar-default {  margin-bottom: 0;background-color: rgba(0, 0, 0, 0);  padding-top: 54px;}
 	.navbar-collapse{}
 	.navbar-nav {}
 	.navbar-nav>li {display: inline-block;float: none;}
@@ -140,12 +181,9 @@ a.btn-default {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .current-menu-ancestor >a {
-  background-color: #31333F;
+  color: red;
 }
-	ul#menu-main > li > a {color: #FFF;
-  border-right:1px solid #3F3F4F;  font-size: 1.8rem;
-  font-family: 'BrandonGrotesqueRegular';
-}
+
 .entry ul.pagination {
   margin: 30px 0 0;
 }
@@ -171,63 +209,13 @@ a.btn-default {
 #primary {
   padding: 50px 0 25px;
 }
-.home #primary{padding-top:0px;}
-	.entry a,
-	.entry a h2{color:#6F8B8F;}
-	.entry a h2 {  margin: 0 0 3px;}
-	.entry h1{padding: 0 0 12px;margin:0 0 16px;}
-	.entry ul,
-	.entry ol{padding:0 0 10px;margin: 0 0 0 20px;}
-	article{padding:15px 0 0;}
-	.featured span { float: right; text-align: right; font-style: italic; margin: 4px 0 0; color: #535B8C; font-size: 14px; }
-	img.attachment-medium{/*   width: 200px;height: auto;  */margin: 0 15px 10px 0;}
-	.featured img.attachment-medium:hover{box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);border-color: #F2F2F2;}
-	.date {font-style: italic; color: #777; }
 
-	#hours{width:218px; text-align:right;}
-	#hours h2{font-size: 2.5rem;letter-spacing: normal;color: #333;padding-bottom: 2px;font-weight: bold;line-height: 21px;}
-	#hours p{  margin: 3px 0;}
-	#hours hr{border-color: #BBB;margin: 10px 0;}
 
-	.home .entry ul li{padding:0;}
-	.home h3{font-style:normal;}
-	.edit-link a{text-transform: uppercase;}
-	.edit-link a,
-	.edit-link .glyphicon,
-	a.post-edit-link{color:#900;}
-	.entry a.more{background: #555;padding:4px 6px; -moz-border-radius:4px; -webkit-border-radius:4px;border-radius:4px;color: white;position: absolute;left: 0;bottom:0;}
-	  .entry a.more:hover{text-decoration:none;background-color: #777;
-		 -webkit-transition: background-color 800ms ease-in;
-		 -moz-transition: background-color 800ms ease-in;
-		 -o-transition: background-color 800ms ease-in;
-		 -ms-transition: background-color 800ms ease-in;
-		 transition: background-color 800ms ease-in;}
-		 .entry a.more-link:hover{color:#800;text-decoration:none;}
-	.home .entry h2{/* font-weight: normal; */  font-family: "BrandonGrotesqueThin",sans-serif;font-size: 3rem; text-transform: uppercase; letter-spacing: .05em; padding-bottom: 7px;}
-	.home p{line-height: 18px;font-size: 15px;}
-	.home article{width:192px;height:205px;padding: 0 22px 25px 0;position: relative;overflow: hidden;clear:none;}
-	.home article#post-2{width: 220px; position: static;}
-	.home section{width: 885px;height:315px;float:left;}
-
-	.page-id-76 #header-main{background:url(images/news.jpg) no-repeat 238px 25px;height:215px;}
 /* ---------------------
 		SLIDESHOW
 ---------------------  */
-	#container{  position: relative;/* width:860px;height:300px; */  margin: 0 auto 30px;background: #FFF;
-  padding: 20px 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.31);}
-	#slider{/* position:absolute;left: 283px; */overflow:hidden;z-index:0;width:625px;height: 286px;}
-	#slider img{border:0;}
-	.slidesContainer{margin-left: 272px;}
-	#nav{z-index:2;}
-	#nav a{font-family: 'BrandonGrotesqueMedium';list-style:none;background:url(images/sprite.png) no-repeat 0px -128px;  height: 64px;
-  width: 256px;margin:0 0 8px; z-index:1;font-size:20px;padding: 20px 15px 0 15px;color:white;text-align:right;float: right;
-  }
-	  #nav a:hover, #nav a.activeSlide{text-decoration:none;padding-right: 42px;width: 283px;margin-right: -27px;}
-	#nav a:nth-child(2){background-position:0px -194px;}
-	#nav a:nth-child(3){background-position:0px -259px;}
-	#nav a:nth-child(4){background-position:0px -326px;}
-	a.slidesNext,a.slidesPrevious{display:none;}
+
+
 /* ---------------------
 	CALL TO ACTION
 ---------------------  */
@@ -236,40 +224,6 @@ a.btn-default {
 	article#call-to-action a{background: #B71F2D;padding:6px 30px;border-radius: 4px;color: white;text-decoration: none;float: right;font-size: 15px;}
 	article#call-to-action a:hover{background:#900;}
 
-/* ---------------------
-		SHOP
----------------------  */
-	#shop article{text-align: center;}
-	#shop .inner {background: rgba(255, 255, 255, 0.85); padding:0 0 12px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);min-height: 407px; }
-	#shop article:hover .inner {box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);background: rgba(255, 255, 255, 0.9);}
-	#shop img.attachment-medium{width: auto;margin: 0 0 10px;border: 0;}
-	#shop h2{ font-size: 2rem;}
-	#shop a h2{color: #555;padding: 5px 14px;}
-	#shop a:hover h2{text-decoration:none;color:#800;text-decoration: none;}
-	p.price{font-family: 'BrandonGrotesqueMedium';text-align: center;  padding: 0 0 8px;font-size: 2.2rem;color: #353535;}
-	p.price.alt{text-align: left;font-size: 19px;padding-bottom: 15px;}
-	form[target="paypal"]{width: 110px;margin: 0 auto;}
-	form[target="paypal"] img{border:0;}
-	form[target="paypal"] select{margin-left: -35px;margin-bottom:5px;width: 155px;}
-	form[target="paypal"] td input{padding-left: 28px;}
-	.entry-content form[target="paypal"]{float:left;}
-	.entry-content form[target="paypal"] select{margin-left:0;}
-
-	a.cart{background: url(images/sprite.png) -65px -76px;padding:6px 10px 5px 32px;width:67px;font-family: 'BrandonGrotesqueMedium';position: absolute;right: 20px;bottom: 3px;font-size: 16px;color:#666;}
-	  a.cart:hover{color:#800;background-position:-65px -102px; text-decoration:none;}
-	#shop .eshop .offset{display:none;}
-	#shop img{margin-left: 25px;margin-top: 25px;}
-	.addtocart select{width: 170px !important;margin-left: -18px !important;}
-	  #content{border-bottom: 1px solid #BBB;padding:0 10px;text-align:center;width:100%;}
-		th#cartItem,td[headers="cartItem"]{width:325px;padding: 10px 15px;}
-		th#cartQty{width:55px;}
-	body.page-id-20 .entry{width: 595px;}
-	tr.stotal{font-weight:bold;}
-.donate:hover {background:url(images/donate.png) no-repeat bottom;}
-.field {margin: 5px 0px 5px 0px;}
-.field:hover {background-color: #EEE;}
-
-input[type="image"]:hover{opacity:.9;}
 /* ---------------------
 		SEARCH
 ---------------------  */
@@ -320,7 +274,7 @@ input[type="image"]:hover{opacity:.9;}
 /* ---------------------
 		FOOTER
 ---------------------  */
-	#footer.copyright {padding: 18px 25px; font-size: 1.3rem; border-top: 1px solid #BBB;clear: both;}
+	.copyright {padding: 18px 25px; font-size: 1.3rem; border-top: 1px solid #BBB;clear: both;}
 	#footer span {padding:0 8px;}
 	address{text-align: center;margin: 0 auto;}
 /* ---------------------
