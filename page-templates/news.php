@@ -3,8 +3,7 @@
 Template Name: News Archive
 */
 
-?>
-<?php get_header();?>
+get_header(); ?>
 <div id="primary" class="container">
 	<div class="entry col-md-8 col-md-offset-2">
 		<h1><?php the_title(); ?></h1>

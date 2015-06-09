@@ -11,11 +11,7 @@
 		     <p><a class="btn btn-default" href="<?php the_permalink(); ?>" class="more">Read More</a></p>
 		    <?php endwhile;
 		    wp_reset_query(); ?>
-		<address><span class="glyphicon glyphicon-map-marker"></span>412 Delaware St, Kansas City, MO 64105</address>
-		<a href="tel:816-541-3695"><span class="glyphicon glyphicon-earphone">816.541.3695</a>
 
-		<address><span class="glyphicon glyphicon-map-marker"></span>1628 Frederick Ave, St Joseph, MO 64501</address>
-		<a href="tel:816-273-0582"><span class="glyphicon glyphicon-earphone">816.273.0582</a>
 		<p class="copyright">&copy;2015 Il Lazzarone. All Rights Reserved.</p>
 	</div>
 
@@ -29,6 +25,11 @@
 		  <h4>Social Navigation</h4>
 		  <?php wp_nav_menu(array('theme_location' => 'social')); ?>
 		</nav>
+		<address><span class="glyphicon glyphicon-map-marker"></span>412 Delaware St, Kansas City, MO 64105 <small>(map)</small></address>
+		<a href="tel:816-541-3695"><span class="glyphicon glyphicon-earphone"></span>816.541.3695</a>
+
+		<address><span class="glyphicon glyphicon-map-marker"></span>1628 Frederick Ave, St Joseph, MO 64501 <small>(map)</small></address>
+		<a href="tel:816-273-0582"><span class="glyphicon glyphicon-earphone"></span>816.273.0582</a>
 	</div>
 </footer>
 
