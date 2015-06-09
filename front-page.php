@@ -13,11 +13,12 @@
                     <div class="carousel-inner">
 	                    <?php $the_query = new WP_Query(array(
 							'post_type' => 'menu',
+							'posts_per_page' => -1,
 						    'tax_query' => array(
 								array(
 									'taxonomy' => 'courses',
 									'field'    => 'slug',
-									'terms'    => 'pizza',
+									'terms'    => 'pizze',
 								),
 							)
 						    ));
@@ -34,13 +35,18 @@
 						     </div>
 
 						     <div class="col-md-4">
-						     	<?php the_post_thumbnail('large', array( 'class' => 'img-responsive'));?>
+							 <?php if ( has_post_thumbnail() ) { ?>
+						     	 <?php the_post_thumbnail('large', array( 'class' => 'img-responsive'));?>
+							 <?php } else { ?>
+									<img width="360" height="360" src="http://66.147.240.173/~illazzar/wordpress/wp-content/uploads/neapolitan-pizza.png" class="img-responsive wp-post-image" alt="neapolitan-pizza">
+							 <?php } ?>
 						     </div>
 
 						     <div class="col-md-4">
 							    <div class="col-md-10 pull-left featuring">
 							    	<span class="lg">Featuring</span>
-									<span class="lh"><?php the_field('ingredients'); ?></span>
+									<span class="lh"><?php echo implode('<br>', get_field('ingredients2')); ?></span>
+									<?php edit_post_link('Edit this.', '<p>', '</p>'); ?>
 						     	</div>
 						     </div>
 							 <div class="clearfix">
