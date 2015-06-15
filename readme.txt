@@ -1,1 +1,1 @@
-Custom WordPress theme for Ilazzarone Pizzeria
+Custom WordPress theme for Illazzarone Pizzeria
