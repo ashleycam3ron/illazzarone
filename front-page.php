@@ -27,7 +27,7 @@
 						   $the_query->the_post(); ?>
 						 <div class="item <?php if ( $count++ == 0){ echo 'active';};?>" data-slide-number="<?php echo $count++;?>">
 						     <h3><div>The</div> <?php the_title();?></h3>
-						     <div class="col-md-4">
+						     <div class="col-md-4 hidden-xs">
 							    <div class="col-md-10 col-md-offset-2">
 								    <span class="xl">10"</span>
 									<p class="lh"><?php the_field('brief_description'); ?></p>
@@ -42,14 +42,14 @@
 							 <?php } ?>
 						     </div>
 
-						     <div class="col-md-4">
-							    <div class="col-md-10 pull-left featuring">
+						     <div class="col-xs-12 col-md-4">
+							    <div class="col-xs-12 col-md-10 pull-left featuring">
 							    	<span class="lg">Featuring</span>
 									<span class="lh"><?php echo implode('<br>', get_field('ingredients2')); ?></span>
 									<?php edit_post_link('Edit this.', '<p>', '</p>'); ?>
 						     	</div>
 						     </div>
-							 <div class="clearfix">
+							 <div class="clearfix hidden-xs">
 								 <h4 class="lg clearfix rating">Rate Pizza</h4>
 							 	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 							 </div>
@@ -111,12 +111,12 @@
     </div><!-- end .row -->
 
     <div class="row equal">
-		  <iframe id="commercial" class="col-xs-12 col-sm-6 inverse" src="https://player.vimeo.com/video/108967402" width="500" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		  <iframe id="commercial" class="col-xs-12 col-sm-6 inverse col" src="https://player.vimeo.com/video/108967402" width="500" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 		  <h2 style="position: absolute;">Il Lazzarone Commercial
 			  <span class="d"></span>
 		  </h2>
 		  </iframe>
-		<div id="oven" class="col-xs-12 col-sm-6 inverse">
+		<div id="oven" class="col-xs-12 col-sm-6 inverse col">
 		  <div class="col-md-8 col-md-offset-2">
 			  <h2><div>The </div>Oven</h2>
 			  <p>Each Acunto oven is made by hand and the family secrets for assembly have been passed down for four generations. The bricks are made from soil found at Mount Vesuvius, which makes them porous and allows them to draw the moisture out of the dough for a crispier final product. Each oven is kept at precisely 900 degrees, which allows us to cook a pizza in about 90&nbsp;seconds.</p>
@@ -135,50 +135,19 @@
 		jQuery('#carousel').carousel({
 		    interval: false
 		});
-
 	});
 
-//equal height columns
-equalheight = function(container){
+<?php if ( wp_is_mobile() ) { ?>
+	jQuery(document).ready(function() {
+	   jQuery("#carousel").swiperight(function() {
+	      jQuery(this).carousel('prev');
+	    });
+	   jQuery("#carousel").swipeleft(function() {
+	      jQuery(this).carousel('next');
+	   });
+	});
+<?php } ?>
 
-var currentTallest = 0,
-     currentRowStart = 0,
-     rowDivs = new Array(),
-     $el,
-     topPosition = 0;
-
-jQuery(container).each(function() {
-
-   $el = jQuery(this);
-   jQuery($el).height('auto')
-   topPostion = $el.position().top;
-
-   if (currentRowStart != topPostion) {
-     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-       rowDivs[currentDiv].height(currentTallest);
-     }
-     rowDivs.length = 0; // empty the array
-     currentRowStart = topPostion;
-     currentTallest = $el.height();
-     rowDivs.push($el);
-   } else {
-     rowDivs.push($el);
-     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-  }
-   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-     rowDivs[currentDiv].height(currentTallest);
-   }
- });
-}
-
-jQuery(window).load(function() {
-  equalheight('.equal .inverse');
-});
-
-
-jQuery(window).resize(function(){
-  equalheight('.equal .inverse');
-});
 </script>
 
 <?php get_footer(); ?>

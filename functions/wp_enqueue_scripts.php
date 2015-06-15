@@ -49,3 +49,8 @@ if (is_home() || is_front_page()){
 	wp_enqueue_script('ease');
 }
 */
+
+if ( wp_is_mobile() ) {
+	wp_enqueue_style('jquery-mobile', 'https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css');
+	wp_enqueue_script('jquery-mobile', 'https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js');
+}

@@ -33,14 +33,14 @@ get_header(); ?>
 						     <h3><div>The</div> <?php the_title();?></h3>
 						     <?php the_post_thumbnail('large', array( 'class' => 'img-responsive fullwidth'));?>
 						     <div class="col-md-4 col-md-offset-1 recipe">
-							    <div class="col-md-10">
+							    <div class="col-md-10 hidden-xs">
 							    	<span class="lg">Highlights</span>
 									<span class="lh"><?php the_field('ingredients'); ?></span>
 									<p class="lh"><?php the_field('brief_description'); ?></p>
 									<?php edit_post_link('Edit this drink.', '<p>', '</p>'); ?>
 						     	</div>
 						     </div>
-							 <div class="clearfix">
+							 <div class="clearfix hidden-xs">
 								 <h4 class="lg clearfix rating">Rate Drink</h4>
 							 	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 							 </div>

@@ -33,6 +33,8 @@
 		<div class="col-sm-3">
      		<?php the_post_thumbnail('medium', array( 'class' => 'img-responsive'));?>
 			<h2 class="text-center"><?php the_title(); ?></h2>
+			<span class="lh"><?php echo implode('<br>', get_field('ingredients2')); ?></span>
+			<p class="price"><?php the_field('price'); ?></p>
 			<?php //the_content(); ?>
 		</div>
 	</article>

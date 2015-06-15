@@ -5,6 +5,7 @@
     <meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
     <meta name="dc.language" CONTENT="US">
 	<meta name="dc.source" CONTENT="http://www.illazzarone.org/">
 	<meta name="dc.title" CONTENT="<?php bloginfo('name');?>">
@@ -12,8 +13,11 @@
 	<meta name="dc.subject" CONTENT="<?php bloginfo('name');?>">
 	<meta name="dc.description" CONTENT="<?php bloginfo('description');?>">
 	<meta name="dc.creator" content="Ashley Cameron">
+	<title><?php echo wp_title();?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" />
     <?php wp_head(); ?>
 </head>
@@ -38,8 +42,6 @@
 			  <span class="icon-bar"></span>
 			</button>
 		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<?php wp_nav_menu( array(
 			  'menu' => 'primary',
@@ -52,4 +54,4 @@
 	</nav>
 </header>
 
-<div class="bk"></div>
+<div class="bk hidden-xs"></div>
