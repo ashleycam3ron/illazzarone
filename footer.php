@@ -21,16 +21,14 @@
 
 	<div class="col-xs-12 col-sm-6 col-md-4">
 		<h3>Connect</h3>
-		<address><span class="glyphicon glyphicon-map-marker hidden-xs"></span>1628 Frederick Ave, St Joseph, MO 64501 <small>(map)</small></address>
-		<a href="tel:816-273-0582"><span class="glyphicon glyphicon-earphone hidden-xs"></span>816.273.0582</a>
 		<nav class="social" role="navigation">
 		  <h4>Social Navigation</h4>
+		  <h5>St Joseph, MO</h5>
 		  <?php wp_nav_menu(array('theme_location' => 'social')); ?>
 		</nav>
-		<address><span class="glyphicon glyphicon-map-marker hidden-xs"></span>412 Delaware St, Kansas City, MO 64105 <small>(map)</small></address>
-		<a href="tel:816-541-3695"><span class="glyphicon glyphicon-earphone hidden-xs"></span>816.541.3695</a>
 		<nav class="social" role="navigation">
 		  <h4>Social Navigation</h4>
+		  <h5>Kansas City, MO</h5>
 		  <?php wp_nav_menu(array('theme_location' => 'social2')); ?>
 		</nav>
 	</div>

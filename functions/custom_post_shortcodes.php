@@ -75,11 +75,11 @@ function illazzarone_menu_template( $type = '' )
     <?php }
 */
 
-	   if ( $the_query->have_posts() ) { ?>
+if ( $the_query->have_posts() ) { ?>
     <div class="row">
         <ul class="menu pizza">
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <li id="post-<?php the_ID(); ?>" class="col-sm-4 col-md-6">
+            <li id="post-<?php the_ID(); ?>" class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0">
             	<div class="inner1">
 	            	<?php if ( has_post_thumbnail() ) { ?>
 				     	 <?php the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive img-circle col-sm-12 hidden-xs'));?>
@@ -103,7 +103,4 @@ function illazzarone_menu_template( $type = '' )
         </ul>
     </div>
     <?php }
-
-
-    return $html;
 }

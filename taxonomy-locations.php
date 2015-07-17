@@ -3,26 +3,20 @@
 </div>
 <div id="archive" class="text-center">
 	<div id="menu" class="container">
-		<div class="col-md-6">
 			<h2><span class="d"></span>Antipasti<span class="d"></span></h2>
 			<?php echo do_shortcode('[menu type="antipasti"]'); ?>
-		</div>
-		<div class="col-md-6">
+<!-- 		<div class="col-md-6"> -->
 			<h2><span class="d"></span>Insalata<span class="d"></span></h2>
 			<?php echo do_shortcode('[menu type="insalata"]'); ?>
-		</div>
+<!-- 		</div> -->
 		<h2><span class="d"></span>Pizze<span class="d"></span></h2>
-		<div class="col-md-6">
 			<h3>Pizze Rosse</h3>
 			<?php echo do_shortcode('[menu type="pizze-rosse"]'); ?>
-		</div>
-		<div class="col-md-6">
 			<h3>Pizze Bianche</h3>
 			<?php echo do_shortcode('[menu type="pizze-bianche"]'); ?>
-		</div>
 
 		<h2><span class="d"></span>Dessert<span class="d"></span></h2>
-		<div class="col-md-6"><?php echo do_shortcode('[menu type="dessert"]'); ?></div>
+		<?php echo do_shortcode('[menu type="dessert"]'); ?>
 
 		<h2><span class="d"></span>Beverages<span class="d"></span></h2>
 		<?php echo do_shortcode('[menu type="beverages"]'); ?>

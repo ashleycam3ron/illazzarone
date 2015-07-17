@@ -38,6 +38,7 @@ function login_header_title() {
 }
 add_filter('login_headertitle', 'login_header_title');
 
+/*
 function change_menu_labels($t) {
     global $menu;
 	//pre($menu);exti;
@@ -49,5 +50,6 @@ function change_menu_labels($t) {
     }
 }
 add_action('admin_menu', 'change_menu_labels' ,1000);
+*/
 
 ?>
