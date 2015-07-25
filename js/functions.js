@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
 */
 
 jQuery(".fancybox, .gallery a").fancybox({
-	//padding: 0,
+	padding: 0,
 	helpers:  {
         title : {
             type : 'inside'
