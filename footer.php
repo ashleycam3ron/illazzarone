@@ -6,9 +6,17 @@
 		    global $more;
 		    $more = 0;
 		    while (have_posts()) : the_post(); ?>
-		    <h4><?php the_title(); ?></h4>
-		    <?php the_excerpt(); ?>
-		     <p><a class="btn btn-default" href="<?php the_permalink(); ?>" class="more">Read More</a></p>
+		    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		    <small class="date">
+			    by <?php $posttags = get_the_tags();
+					if ($posttags) {
+					  foreach($posttags as $tag) {
+					    echo $tag->name . ' ';
+					  }
+					}
+				?>
+				 on <?php the_date('F d, Y'); ?></small>
+		    <p><a class="btn btn-default" href="<?php the_permalink(); ?>" class="more">Read More</a></p>
 		    <?php endwhile;
 		    wp_reset_query(); ?>
 
