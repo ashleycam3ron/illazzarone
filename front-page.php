@@ -14,11 +14,19 @@
 	                    <?php $the_query = new WP_Query(array(
 							'post_type' => 'menu',
 							'posts_per_page' => -1,
+							'orderby' => 'menu_order',
+							'order' => 'ASC',
 						    'tax_query' => array(
+							    'relation' => 'AND',
 								array(
 									'taxonomy' => 'courses',
 									'field'    => 'slug',
-									'terms'    => 'pizze',
+									'terms'    => array('featured'),
+								),
+								array(
+									'taxonomy' => 'courses',
+									'field'    => 'slug',
+									'terms'    => array('pizze'),
 								),
 							)
 						    ));
@@ -68,21 +76,21 @@
 		<ul class="col-md-12 menu">
 	      <li class="col-xs-12 col-sm-6 col-md-4 c1">
 	      	<div class="inner">
-		      <a href="/">Beverages
+		      <a href="<?php echo home_url(); ?>/the-bar">Beverages
 			      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/beverages.jpg" alt="Beverages" class="img-responsive right">
 		      </a>
 		    </div>
 	      </li>
 		  <li class="col-xs-12 col-sm-6 col-md-4 c2">
 		  	<div class="inner">
-		      <a href="/">Appetizers &amp; Insalatas
+		      <a href="<?php echo home_url(); ?>/menu/#antipasti">Appetizers &amp; Insalatas
 		      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/appetizers-and-salads.jpg" alt="Appetizers and Insalatas" class="img-responsive">
 		      </a>
 		  	</div>
 	      </li>
 	      <li class="col-xs-12 col-sm-6 col-md-4 c3">
 	      	<div class="inner">
-		      <a href="/">Desserts
+		      <a href="<?php echo home_url(); ?>/menu/#dessert">Desserts
 		      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/desserts.jpg" alt="Beverages" class="img-responsive left">
 		      </a>
 	      	</div>

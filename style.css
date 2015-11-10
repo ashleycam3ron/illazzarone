@@ -4,10 +4,10 @@ Theme URI: 		http://illazzarone.org
 Description:    Custom theme for Il Lazzarone Pizzeria
 Author: 		Ashley Cameron Design, Inc
 Author URI: 	http://ashley-cameron.com/
-Version: 		2.0
+Version: 		1.0
 License: 		The MIT License (MIT)
 License URI:
-Tags:			responsive,no sidebar, bootstrap
+Tags:			dark
 Text Domain: illazzarone
 */
 
@@ -90,7 +90,7 @@ nav > h2,
 .social h4,
 #bar > h2{ display:none;}
 
-body {font-family:"futura-pt",'Futura', sans-serif;font-size: 14px;color:#333;}
+body {font-family:"futura-pt",'Futura', sans-serif;font-size: 14px;font-size:1.6em;color:#333;}
 body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {font-size-adjust: 0.5;}
 
 #page {font-size: 1em;line-height: 1.25;/* margin-top: 5%; */margin-bottom: 5%;background-color: rgba(255, 255, 255, 0.9);position: relative;}
@@ -155,7 +155,6 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 #feature *{color: white;}
 #feature{background: url(images/bg-wood.jpg) repeat;padding-top: 5%;padding-bottom:1%;}
 #archive{background: url(images/bg-wood.jpg) repeat;padding-top: 2%;}
-#carousel{}
 .carousel-control.right,.carousel-control.left{background: transparent;}
 .item div { opacity: 0; }
 .item img.wp-post-image {margin: auto;}
@@ -166,10 +165,10 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 .item h3{opacity: 0;}
 .item.active div,
 .item.active > h3 {
-  transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -webkit-transition: opacity .5s ease-in-out;
-  opacity: 1;}
+	transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	opacity: 1;}
 .featuring{padding-top: 30px;}
 .arrow-prev {left: 15px;}
 .arrow-prev,
@@ -193,6 +192,7 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
   color: #222;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 1.2em;
 }
 .menu {list-style: none;}
 .navbar-default {  margin-bottom: 0;background-color: rgba(0, 0, 0, 0);  padding-top: 54px;border: 0;}
@@ -231,7 +231,7 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 }
 
 #banner{height: 40vh;/* overflow: hidden; */}
-#video-bg { right: 0; bottom: 0; width: auto; min-width: 100%; height: auto; min-height: 100%; z-index: -100; background: transparent url(neapolitan-wood-fired-pizza.jpg) no-repeat bottom; background-size: cover; }
+#video-bg { right: 0; bottom: 0; width: auto; min-width: 100%; height: auto; min-height: 100%; z-index: -100; background: transparent url(images/neapolitan-wood-fired-pizza.jpg) no-repeat bottom; background-size: cover; }
 
 /* !Bar */
 	#bar{background: black;color: white; padding-bottom: 5%;}
@@ -241,8 +241,10 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 /* !Menu */
 	#menu{color: white;}
 	#menu h2{  color: #FFF;clear: both;  font-size: 2.25em; border-top: 1px solid #FFF; border-bottom: 1px solid #FFF;  padding: 5px 0;}
+	#menu li{padding-left: 0;padding-right: 0;}
 	#menu li .inner1{padding-top: 10px;padding-bottom: 10px;  margin: 3px 0;} /* .inner1 {background-color: rgba(0, 0, 0, 0.23);} */
 	.menu.pizza img{  margin: 0 auto;}
+/* 	.beverages img{border-radius: 20em;} */
 
 /* !Search
 	#searchform{position: relative;margin: 12px 0 0;  padding: 0;}
@@ -262,6 +264,16 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 	#sidebar h2:after {border-top: 1px solid black; content: ''; display: table-cell; position: relative; top: 0.5em; width: 25%; }
 	#sidebar h2:before { right: 4%; }
 	#sidebar h2:after { left: 4%; }
+
+/* !Coming Soon */
+	.page-id-233 #header,
+	.page-id-233 #footer,
+	.page-id-233 .bk {display: none;}
+	.page-id-233{background: url(images/pattern-coming-soon.png) repeat;}
+	.coming ul{list-style: none;}
+	.coming li{display: inline-block;margin: 0 5px;}
+	.coming a{font-size: 20px;color: #333;}
+	.coming a:hover {text-decoration: underline;}
 
 /* !News */
 	.page-id-121 #page{padding-top: 4%;}
@@ -289,8 +301,7 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 
 
 /* !Social */
-	.social h5{float: left;  clear: left;clear: left;width: 120px; text-align: right; margin-right: 7px;}
-	.social > div{float: left;}
+	.social h5{text-transform:uppercase;text-align:center;margin: 2px 7px 5px;color: #777;font-size: 13px;letter-spacing: .1em;}
 	.social li {display: inline-block}
 	.social li a{width:17px;height:19px;display: block;  margin: 7px;background:url(images/connect.png) no-repeat 2px 2px;text-indent:-9999px;font-size:0;}
 	.social li a:hover{}
@@ -302,33 +313,26 @@ h4.rating{font-size: 1.3rem;letter-spacing:8px;margin-bottom: 3px;}
 	.social li.yelp a		{background-position:-139px 0;}
 
 /* !Footer  */
-	.copyright {padding: 18px 25px; font-size: 1.3rem; border-top: 1px solid #BBB;clear: both;}
+	.copyright {padding: 18px 25px; font-size: 1.3rem;clear: both;}
 	#footer{background: white;  position: relative;text-align: center;}
 	#footer span {padding:0 8px;}
 	address{margin: 0 auto;}
-	#footer h4 { font-size: 95%; line-height: 1.5; }
+	#footer h3 {margin-bottom: 0;}
+	#footer h4 { font-size: 95%; line-height: 1.5;}
+	#footer .menu{margin: 0;}
 	small { color: #8C8C8C; margin: 5px 0 20px; display: block; }
 
 
 /* 	!Mobile styles */
 
 @media (max-width: 400px) {
-.navbar-default {
-  padding-top: 15px;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-.navbar-brand {  width: 70%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 0px;  padding-bottom: 0;
-  height: 132px;}
-h4 {font-size: 1.2em;}
-.gallery li{margin: 0 48px 48px auto;}
-.gallery li {width: 120px; height: 120px; }
-.gallery a { width: 203px; height: 203px; transform: rotate(-45deg) translateX(-9px) translateY(-59px); }
+	.navbar-default { padding-top: 15px; }
+	.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
+	.navbar-brand {  width: 70%; margin: 0 auto; left: 0; right: 0; top: 0px;  padding-bottom: 0; height: 132px;}
+	h4 {font-size: 1.2em;}
+	.gallery li{margin: 0 48px 48px auto;}
+	.gallery li {width: 120px; height: 120px; }
+	.gallery a { width: 203px; height: 203px; transform: rotate(-45deg) translateX(-9px) translateY(-59px); }
 }
 @media (max-width: 768px) {
 	#archive{background: white;padding-top:40px;}
@@ -336,31 +340,27 @@ h4 {font-size: 1.2em;}
 	.featuring {  padding-top: 12px;}
 	#menu{color: black;}
 	#history, #ingredients {  padding-bottom: 0;}
-
 	.navbar-nav{float: left;}
 	ul#menu-main {width: 100%;  text-align: center;padding: 50px 20px 20px;}
 	.navbar-nav>li {display: block;}
 	ul#menu-main {  margin: 0 auto;}
 	.navbar-default .navbar-collapse{padding: 0;}
 	.navbar-nav .open .dropdown-menu{text-align: center;}
-
-	.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
-	  color: #FFF;
-	  background-color: #FF7472;
-	}
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {color: #FFF; background-color: #FF7472; }
 	#menu h2 {font-size: 1.5em;color:#ff7472;border-color: #ff7472;  line-height: 1.5em;padding: 0px 0 3px;  margin: 3px 0 10px;}
 	#menu h3{font-weight: bold;color:#ff7472;font-size: 1.5em;}
 	#menu li .inner1 {padding: 0;}
 	#menu .d {background: url(images/pattern.png) repeat-x;width: 60px;margin: 5px 14px -4px 8px;}
-	#footer a {color: #FF7472; font-size: 1.75em;}
+	#footer a {color: #FF7472;}
 	.item img.wp-post-image {  max-width: 70%;}
 	.lh {  line-height: 1;}
-	.arrow-prev, .arrow-next {
-  top: 28%;}
-
+	.arrow-prev, .arrow-next {top: 28%;}
 }
 @media (max-width: 1200px) {
 }
 @media (min-width: 992px){
-	#menu li{  min-height: 428px;}
+	#menu li{  min-height: 475px;}
+	#carousel .lh{font-size: 1.2em;}
 }

@@ -19,10 +19,16 @@ get_header(); ?>
 	                    <?php $the_query = new WP_Query(array(
 							'post_type' => 'menu',
 						    'tax_query' => array(
+							    'relation' => 'AND',
 								array(
 									'taxonomy' => 'courses',
 									'field'    => 'slug',
-									'terms'    => array( 'bar', 'featured' ),
+									'terms'    => array( 'bar' ),
+								),
+								array(
+									'taxonomy' => 'courses',
+									'field'    => 'slug',
+									'terms'    => array( 'featured' ),
 								),
 							)
 						    ));
@@ -56,16 +62,20 @@ get_header(); ?>
         </div><!-- end #slider -->
 
      </div><!--/main slider carousel-->
-	<div class="row">
+	<div class="container">
+		<div class="row">
+			
+		
 		<div class="col-xs-12 col-sm-6">
 		  <h2>The Bar</h2>
-		  <p class="col-md-10 col-md-offset-1">Kansas City has a full bar featuring herb-infused concoctions. Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		  <p class="col-md-10 col-md-offset-1">Welcome to Bar Lazz! All of our drinks are poured, stirred, and served with love ... and lots of pizza.  Our bar program is especially centered around Italian drinking culture, which means that in addition to fine wine, whiskey and beer (30 on tap), we encourage our guests to dive into Kansas City's largest vermouth and amaro selection.  Whether served neat with a twist or adding depth to hand-crafted cocktail, we love to discover new ways of enjoying these refreshing Italian spirits with our patrons. The quickest way to our happy hour is through the back door ... seven days a week between 3-6pm and 10pm-close we are serving up $6 margherita and marinara pizzas and giving 20% off alcohol!</p>
 		</div>
 		<div class="col-xs-12 col-sm-6">
-		  <h2>Quality <br>Ingredients</h2>
+		  <h2>Happy Hour</h2>
 		  <p class="col-md-10 col-md-offset-1">Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
 		</div>
-    </div><!-- end .row -->
+		</div>
+    </div><!-- end .container -->
 
 
 </div>
