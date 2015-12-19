@@ -17,14 +17,13 @@ if(!function_exists('initialize')){
 }
 
 function custom_login_logo(){
-	$path = get_stylesheet_directory_uri().'/images/logo-login.png.png';
-	$logo = get_stylesheet_directory_uri().'/images/logo-login.png.png';
+	$logo = get_stylesheet_directory_uri().'/images/Il-Lazzarone-Neapolitan-Pizzeria-logo.png';
 	$images = get_stylesheet_directory_uri().'/images/';
 	//$l = getimagesize($path);
 	echo '<style type="text/css">
-			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:230px !important;height: 120px !important;margin: 0 auto !important;}
-			/* body.login {background:url("'. $images .'stripe1.png") !important;} */
-			.login form {background: #DDD !important;border: 1px solid #EEE !important;}
+			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:320px !important;height: 151px !important;margin: 0 auto !important;}
+			body.login {background:url("'. $images .'pattern.png") !important;}
+			.login #backtoblog a, .login #nav a, .login h1 a {color: #252121;font-weight: bold;}
 		</style>';
 }
 add_action('login_head','custom_login_logo');

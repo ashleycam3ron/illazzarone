@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-    <meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>" />
+    <meta name="description" content="Il Lazzarone is an Authentic Neapolitan Pizzeria in Kansas City & Saint Joseph, Missouri. We make pizza the old way – featuring simple, quality ingredients, cooked in less than 90 seconds in a wood-fired oven at 1000ºF." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000">
@@ -11,7 +11,7 @@
 	<meta name="dc.title" CONTENT="<?php bloginfo('name');?>">
 	<meta name="dc.keywords" CONTENT="Neapolitan Pizza">
 	<meta name="dc.subject" CONTENT="<?php bloginfo('name');?>">
-	<meta name="dc.description" CONTENT="<?php bloginfo('description');?>">
+	<meta name="dc.description" CONTENT="Il Lazzarone is an Authentic Neapolitan Pizzeria in Kansas City & Saint Joseph, Missouri. We make pizza the old way – featuring simple, quality ingredients, cooked in less than 90 seconds in a wood-fired oven at 1000ºF.">
 	<meta name="dc.creator" content="Ashley Cameron">
 	<title><?php echo wp_title();?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -26,14 +26,10 @@
 <body <?php body_class(); ?>>
 
 <header id="header" role="banner">
-<!--  <form id="searchform" class="navbar-form navbar-right" role="search" action="<?php echo home_url( '/' ); ?>">
-			  <div class="form-group">
-			    <input type="text" id="s" class="form-control" placeholder="Search">
-			  </div>
-			  <button type="submit" id="searchsubmit" class="btn btn-default">Submit</button>
-		  </form> -->
-
-	<a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>"><h1><?php bloginfo('name')?></h1></a>
+	<a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
+		<h1><?php bloginfo('name')?> – <?php bloginfo('description');?></h1>
+		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/Il-Lazzarone-Neapolitan-Pizzeria-logo.png" alt="Il Lazzarone Neapolitan Pizzeria logo">
+	</a>
 	<nav class="navbar navbar-default" role="navigation">
 		<h2>Primary Navigation</h2>
 		<div class="navbar-header">

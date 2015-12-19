@@ -19,7 +19,28 @@
 		<?php echo do_shortcode('[menu type="dessert"]'); ?>
 
 		<h2 id="beverages"><span class="d"></span>Beverages<span class="d"></span></h2>
-		<div class="beverages"><?php echo do_shortcode('[menu type="beverages"]'); ?></div>
+		<div class="beverages"><?php //echo do_shortcode('[menu type="beverages"]'); ?>
+			<ul class="menu">
+				<li class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3">
+					<a target="_blank" href="<?php the_field('pdf',263); ?>">
+						<img class="img-responsive col-sm-12 hidden-xs" src="<?php the_field('thumb',263); ?>" alt="Saint Joseph Wine & Beer List"/>
+						<div class="col-sm-12">
+							<h4>St Joseph Wine & Beer List</h4>
+						</div>
+					</a>
+					PDF
+				</li>
+				<li class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3">
+					<a target="_blank" href="<?php the_field('pdf',264); ?>">
+						<img class="img-responsive col-sm-12 hidden-xs" src="<?php the_field('thumb',264); ?>" alt="Kansas City Wine & Beer List"/>
+						<div class="col-sm-12">
+							<h4>Kansas City Wine & Beer List</h4>
+						</div>
+					</a>
+					PDF
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 <?php get_footer(); ?>

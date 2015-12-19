@@ -19,8 +19,6 @@
 		    <p><a class="btn btn-default" href="<?php the_permalink(); ?>" class="more">Read More</a></p>
 		    <?php endwhile;
 		    wp_reset_query(); ?>
-
-		<p class="copyright">&copy;2015 Il Lazzarone. All Rights Reserved.</p>
 	</div>
 
 	<div class="col-xs-12 col-sm-4 col-md-4">
@@ -40,6 +38,8 @@
 		  <h5>Kansas City, MO</h5>
 		</nav>
 	</div>
+	<p class="row copyright">&copy;<?php echo date('Y'); ?> Il Lazzarone Neapolitan Pizzeria. All Rights Reserved.</p>
+	<small style="margin-top: 0;"><a href="http://ashley-cameron.com" target="_blank">Handcrafted by Ashley Cameron</a></small>
 </footer>
 
 <?php wp_footer(); ?>

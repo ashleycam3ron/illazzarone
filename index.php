@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 <?php if (is_page(10)){ ?>
-<!--
-<div id="banner" style="background: url(<?php echo get_stylesheet_directory_uri() ?>/images/neapolitan-wood-fired-pizza.jpg) no-repeat center;background-size: cover;min-height: 40vh;">
-</div>
--->
 <div id="banner">
-<video autoplay loop muted poster="<?php echo get_stylesheet_directory_uri() ?>/images/neapolitan-wood-fired-pizza.jpg" id="video-bg">
+<video autoplay loop muted poster="<?php echo get_stylesheet_directory_uri() ?>/images/neapolitan-wood-fired-pizza1.jpg" id="video-bg">
 	<source src="<?php echo get_stylesheet_directory_uri() ?>/videos/neapolitan-wood-fired-pizza.webm" type="video/webm">
 	<source src="<?php echo get_stylesheet_directory_uri() ?>/videos/neapolitan-wood-fired-pizza.mp4" type="video/mp4">
 </video>
@@ -13,6 +9,10 @@
 <?php } ?>
 <?php if (is_page(21)){ ?>
 	<iframe src="https://www.google.com/maps/d/embed?mid=z3twnvWQ1PhU.kYRPzqlE-lf4" width="640" height="380" style="width: 100%;"></iframe>
+<?php } ?>
+<?php if (is_page(366)){ ?>
+	<div id="banner" style="background: url(<?php echo get_stylesheet_directory_uri() ?>/images/Neapolitan-Pizza_What-to-Expect.jpg) no-repeat center;background-size: cover;min-height: 40vh;">
+	</div>
 <?php } ?>
 <?php if (is_single()){ ?>
 	<div id="banner" style="background: url(<?php echo get_stylesheet_directory_uri() ?>/images/il-Lazzarone-News.jpg) no-repeat center;background-size: cover;min-height: 40vh;">
@@ -53,7 +53,7 @@
 		if( $images ): ?>
         <ul>
             <?php foreach( $images as $image ): ?>
-                <li class="col-xs-4 col-sm-3 col-md-2">
+                <li class="col-xs-3 col-sm-3 col-md-2">
                     <a href="<?php echo $image['sizes']['large']; ?>" class="fancybox" rel="pizza">
 	                    <img class="img-responsive" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['title']; ?>" />
 	                </a>

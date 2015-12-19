@@ -36,8 +36,8 @@
 						 <div class="item <?php if ( $count++ == 0){ echo 'active';};?>" data-slide-number="<?php echo $count++;?>">
 						     <h3><div>The</div> <?php the_title();?></h3>
 						     <div class="col-md-4 hidden-xs">
-							    <div class="col-md-10 col-md-offset-2">
-								    <span class="xl">10"</span>
+							    <div class="col-sm-8 col-sm-offset-2 col-md-10">
+								    <span class="xl">11"</span>
 									<p class="lh"><?php the_field('brief_description'); ?></p>
 								</div>
 						     </div>
@@ -112,7 +112,7 @@
 		  <p class="col-md-10 col-md-offset-1"><?php the_field('philosophy',false,false); ?></p>
 		</div>
 
-		<div id="ingredients" class="col-xs-10 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
+		<div id="ingredients" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
 		  <h2>Quality <br>Ingredients</h2>
 		  <p class="col-md-10 col-md-offset-1"><?php the_field('ingredients',false,false); ?></p>
 		</div>
