@@ -2,16 +2,10 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-    <meta name="description" content="Il Lazzarone is an Authentic Neapolitan Pizzeria in Kansas City & Saint Joseph, Missouri. We make pizza the old way – featuring simple, quality ingredients, cooked in less than 90 seconds in a wood-fired oven at 1000ºF." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000">
     <meta name="dc.language" CONTENT="US">
-	<meta name="dc.source" CONTENT="http://www.illazzarone.org/">
-	<meta name="dc.title" CONTENT="<?php bloginfo('name');?>">
-	<meta name="dc.keywords" CONTENT="Neapolitan Pizza">
-	<meta name="dc.subject" CONTENT="<?php bloginfo('name');?>">
-	<meta name="dc.description" CONTENT="Il Lazzarone is an Authentic Neapolitan Pizzeria in Kansas City & Saint Joseph, Missouri. We make pizza the old way – featuring simple, quality ingredients, cooked in less than 90 seconds in a wood-fired oven at 1000ºF.">
 	<meta name="dc.creator" content="Ashley Cameron">
 	<title><?php echo wp_title();?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

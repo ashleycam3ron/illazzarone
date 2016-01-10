@@ -12,6 +12,7 @@ get_header(); ?>
 	<!-- main slider carousel -->
     <div class="row" id="bar">
 	    <h2>From the Bar</h2>
+	    <div style="display: none"><?php the_content(); ?></div>
         <div id="slider">
 
             <div id="carousel-bounding-box">
