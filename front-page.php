@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <div id="home" class="container-fluid text-center">
+	<h1 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h1>
 
 	<!-- main slider carousel -->
     <div class="row" id="feature">

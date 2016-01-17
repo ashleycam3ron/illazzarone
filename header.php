@@ -18,10 +18,9 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+<h4 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h4>
 <header id="header" role="banner">
 	<a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
-		<h1><?php bloginfo('name')?> – <?php bloginfo('description');?></h1>
 		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/Il-Lazzarone-Neapolitan-Pizzeria-logo.png" alt="Il Lazzarone Neapolitan Pizzeria logo">
 	</a>
 	<nav class="navbar navbar-default" role="navigation">

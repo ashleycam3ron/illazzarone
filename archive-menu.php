@@ -2,6 +2,7 @@
 <div id="banner" class="hidden-xs" style="background: url(<?php echo get_stylesheet_directory_uri() ?>/images/neapolitan-wood-fired-pizza.jpg) no-repeat center #000;min-height: 40vh;">
 </div>
 <div id="archive" class="text-center">
+	<h1 class="hidden">Il Lazzarone Menu – Appetizers, Salads, Pizza, Dessert, & Drinks</h1>
 	<div id="menu" class="container">
 		<h2 id="antipasti"><span class="d"></span>Antipasti<span class="d"></span></h2>
 		<?php echo do_shortcode('[menu type="antipasti"]'); ?>

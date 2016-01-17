@@ -6,4 +6,10 @@
 		</div>
 	</article>
 </div>
+
+<? if (is_404()) { ?>
+ _gaq.push(['_trackEvent', '404',
+              document.location.pathname + document.location.search,
+              document.referrer, 0, true]);
+<? } ?>
 <?php get_footer(); ?>

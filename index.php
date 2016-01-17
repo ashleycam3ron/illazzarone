@@ -34,7 +34,7 @@
 		</div>
       <?php } else { ?>
         <div class="entry col-sm-12">
-			<h2><?php the_title(); ?></h2>
+			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<?php if (is_single()){ ?><p><a target="_blank" href="<?php the_field('news_source_link'); ?>">Continue reading →</a></p><?php } ?>
 		</div>
@@ -43,7 +43,7 @@
 	</article>
   <?php endwhile; ?>
   <?php else : ?>
-	<h2>Not Found</h2>
+	<h1>Not Found</h1>
   <?php endif; ?>
 </div>
 
