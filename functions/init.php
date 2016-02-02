@@ -1,11 +1,13 @@
 <?php
 remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'rel_canonical');
-remove_action('wp_head', 'print_emoji_detection_script', 7 );
-remove_action('wp_print_styles', 'print_emoji_styles' );
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 if(!function_exists('initialize')){
 	function initialize() {
@@ -17,14 +19,13 @@ if(!function_exists('initialize')){
 }
 
 function custom_login_logo(){
-	$path = get_stylesheet_directory_uri().'/images/logo-login.png.png';
-	$logo = get_stylesheet_directory_uri().'/images/logo-login.png.png';
+	$logo = get_stylesheet_directory_uri().'/images/Il-Lazzarone-Neapolitan-Pizzeria-logo.png';
 	$images = get_stylesheet_directory_uri().'/images/';
 	//$l = getimagesize($path);
 	echo '<style type="text/css">
-			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:230px !important;height: 120px !important;margin: 0 auto !important;}
-			/* body.login {background:url("'. $images .'stripe1.png") !important;} */
-			.login form {background: #DDD !important;border: 1px solid #EEE !important;}
+			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:320px !important;height: 151px !important;margin: 0 auto !important;}
+			body.login {background:url("'. $images .'pattern.png") !important;}
+			.login #backtoblog a, .login #nav a, .login h1 a {color: #252121;font-weight: bold;}
 		</style>';
 }
 add_action('login_head','custom_login_logo');
@@ -38,6 +39,7 @@ function login_header_title() {
 }
 add_filter('login_headertitle', 'login_header_title');
 
+/*
 function change_menu_labels($t) {
     global $menu;
 	//pre($menu);exti;
@@ -49,5 +51,6 @@ function change_menu_labels($t) {
     }
 }
 add_action('admin_menu', 'change_menu_labels' ,1000);
+*/
 
 ?>
