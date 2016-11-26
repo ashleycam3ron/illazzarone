@@ -57,10 +57,12 @@ get_header(); ?>
 						     	</div>
 						     </div>
 						     <?php } ?>
+<!--
 							 <div class="clearfix hidden-xs">
 								 <h4 class="lg clearfix rating">Rate Drink</h4>
 							 	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 							 </div>
+-->
 						</div><!-- item active -->
 						<?php endwhile; wp_reset_postdata(); ?>
 

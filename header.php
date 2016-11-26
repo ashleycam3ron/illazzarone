@@ -11,6 +11,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="google-site-verification" content="cg3DVJiUr1JZ6pvULWLbdmAkSuZRQnIWMFMFf4nqk2A" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" />
     <script src="//use.typekit.net/lvz3uwx.js"></script>
